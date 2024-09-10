@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Search Engine Application</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="#create">Create Dataset</a></li>
+            <li><a href="#upload">Upload Document</a></li>
+            <li><a href="#upload-bulk">Upload Bulk Documents</a></li>
+            <li><a href="#search">Search</a></li>
+        </ul>
+        <!-- <button onclick="toggleDarkMode()">Toggle Dark Mode</button> -->
+    </nav>
+
+    <section id="create">
+        <h2>Create Dataset</h2>
+        <form action="/create_dataset" method="POST">
+            <label for="dataset_name">Dataset Name:</label>
+            <input type="text" id="dataset_name" name="dataset_name" required>
+            <button type="submit">Create Dataset</button>
+        </form>
+    </section>
+
+    <section id="upload">
+        <h2>Upload Document</h2>
+        <form action="/upload_document" method="POST">
+            <label for="dataset_name">Dataset Name:</label>
+            <input type="text" id="dataset_name" name="dataset_name" required>
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content" required>
+            <label for="metaData">Metadata (key:value, comma separated):</label>
+            <input type="text" id="metaData" name="metaData" required>
+            <button type="submit">Upload Document</button>
+        </form>
+    </section>
+
+    <section id="upload-bulk">
+        <h2>Upload Bulk Documents</h2>
+        <form action="/upload_bulk_documents" method="POST" enctype="multipart/form-data">
+            <label for="dataset_name">Dataset Name:</label>
+            <input type="text" id="dataset_name" name="dataset_name" required>
+            <label for="file">CSV File:</label>
+            <input type="file" id="file" name="file" required>
+            <button type="submit">Upload Bulk Documents</button>
+        </form>
+    </section>
+
+    <section id="search">
+        <h2>Search Documents</h2>
+        <form action="/search" method="GET">
+            <label for="dataset_name">Dataset Name:</label>
+            <input type="text" id="dataset_name" name="dataset_name" required>
+            <label for="search_patterns">Search Patterns:</label>
+            <input type="text" id="search_patterns" name="search_patterns" required>
+            <label for="order_by_key">Order By (optional):</label>
+            <input type="text" id="order_by_key" name="order_by_key">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+</body>
+</html>

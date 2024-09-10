@@ -1,0 +1,162 @@
+/* General Styling
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+body.dark-mode {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+}
+
+nav.dark-mode {
+    background-color: #333;
+}
+
+nav.dark-mode ul li a {
+    color: #ddd;
+}
+
+section.dark-mode {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+input.dark-mode[type="text"],
+input.dark-mode[type="file"] {
+    background-color: #444;
+    color: #ddd;
+    border: 1px solid #555;
+}
+
+button.dark-mode {
+    background-color: #555;
+}
+
+button.dark-mode:hover {
+    background-color: #777;
+} */
+
+/* Style for the navigation bar */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style for the unordered list inside the nav */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Style for each list item */
+nav ul li {
+    display: inline;
+}
+
+/* Style for each anchor link */
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change the color when hovering over a link */
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Add responsiveness for smaller screens */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        text-align: left;
+    }
+}
